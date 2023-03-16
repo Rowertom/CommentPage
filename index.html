@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel='stylesheet' href='dist/style.css'>
+    <script src="https://kit.fontawesome.com/43d8a91248.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header class='header'>
+        <div class="header__logo">Page for comments</div>
+    </header>
+    <main class='main'>
+        <form class="form" id="form-comment" >
+            <div class="form__group">
+                <label for="comment-name">Name:</label>
+                <input type="text" name="name" class="form__control" id="comment-name" placeholder="Enter your name">
+            </div>
+            <div class="form__group">
+                <label for="comment-text">Comment:</label>
+                <textarea type="text" name="text" class="form__control" id="comment-text" placeholder="comment" autofocus required></textarea>
+                <div class="form__error" hidden="true">Поле должно быть заполнено</div>
+            </div>
+            <div class="form__group">
+                <label for="comment-body">Date:</label>
+                <input type="date" name="date" class="form__control__date" id="comment-date"></input>
+            </div>
+                <input type="submit" id="comment-add" class="btn"></input>
+            </div>
+        </form>
+        <section class="comments"></section>
+    </main>
+  
+
+
+    <script type="text/javascript" src="dist/bundle.js" defer></script>
+</body>
+<template id="comment-template">
+    <div class="comment">
+        <h3 class="comment__name">имя</h3>
+        <p class="comment__text">текст</p>
+        <p class="comment__date">дата</p>
+        <p class="comment__time">время</p>
+        <button class="comment__delete" aria-label="Удалить карточку"><i
+                class="fa-sharp fa-solid fa-trash"></i></button>
+        <button class="comment__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i> </button>
+    </div>
+</template>
+
+</html>

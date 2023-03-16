@@ -1,0 +1,28 @@
+.form{
+    padding: 40px;
+  
+    border: 1px solid lightblue;
+    border-radius: 50px;
+    &__group{
+        font-size: 18px;
+        padding: 10px;
+    }
+    &__control{
+        width: 100%;
+        padding: 10px;
+        border: 0.8px solid rgb(179, 241, 241);
+        border-radius: 20px;
+        &:focus{
+            box-shadow: 5px 5px 5px lightgreen;
+        }
+        &__date{
+            width: 10%;
+            padding: 10px;
+            border: 0.8px solid rgb(179, 241, 241);
+            border-radius: 20px;
+            &:focus{
+                box-shadow: 5px 5px 5px lightgreen;
+            }
+        }
+    }
+}
